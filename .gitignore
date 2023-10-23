@@ -1,4 +1,4 @@
 node_modules
 .env
 config.json
-commands
+commands\Utili\shiru.js
