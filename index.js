@@ -52,9 +52,9 @@ client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est en ligne !`);
 })
 
-client.on('message', (message) => {
-    if (message.content === 'test') {
-      message.channel.send('pwet');
+client.on('message', function (message)  {
+    if (message.content === '!test') {
+      message.channel.send('pong');
     }
   });
 
