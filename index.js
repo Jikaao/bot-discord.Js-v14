@@ -1,12 +1,13 @@
 const Discord = require('discord.js')
 const fs = require('node:fs');
 const path = require('node:path');
-const { Collection, Events } = require('discord.js')
+const { Collection, Events, ActivityType } = require('discord.js')
 const client = new Discord.Client({intents: 3276799}) 
 const { token } = require('./config.json')
+const PREFIX = "!"
 
 
-// chemin vers les commandes
+// path to commands
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
@@ -50,9 +51,15 @@ client.on(Events.InteractionCreate, async interaction => {
 
 client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est en ligne !`);
-})
 
-client.on('message', function (message)  {
+	client.user.setPresence({
+		activities:[{
+			name: "discord.gg/Fairytailfr", type: ActivityType.Custom }], // Playing, Competing, Custom, Listening, Streaming, Watching
+		status: "dnd",
+	});
+});
+
+client.on('messageCreate', (message) => {
     if (message.content === '!test') {
       message.channel.send('pong');
     }
