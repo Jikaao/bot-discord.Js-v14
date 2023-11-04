@@ -55,7 +55,7 @@ client.on('ready', () => {
 			name: ` discord.gg/Fairytailfr`, 
 			type: ActivityType.Custom}], // Playing, Competing, Custom, Listening, Streaming, Watching
 			
-		status: "dnd",
+		status: "dnd", // online, offline, idle, dnd
 	});
 	
 });
