@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const fs = require('node:fs');
 const path = require('node:path');
-const { Collection, Events, ActivityType } = require('discord.js')
+const { Collection, Client, Events, ActivityType } = require('discord.js')
 const client = new Discord.Client({intents: 3276799}) 
 const { token } = require('./config.json')
 const PREFIX = "!"
