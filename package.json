@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1"
+    "djs-commander": "^0.0.50",
+    "dotenv": "^16.3.1",
+    "openai": "^4.14.0",
+    "replicate": "^0.20.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.8",

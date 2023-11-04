@@ -6,7 +6,6 @@ const client = new Discord.Client({intents: 3276799})
 const { token } = require('./config.json')
 const PREFIX = "!"
 
-
 // path to commands
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
@@ -51,12 +50,14 @@ client.on(Events.InteractionCreate, async interaction => {
 
 client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est en ligne !`);
-
 	client.user.setPresence({
 		activities:[{
-			name: "discord.gg/Fairytailfr", type: ActivityType.Custom }], // Playing, Competing, Custom, Listening, Streaming, Watching
+			name: ` discord.gg/Fairytailfr`, 
+			type: ActivityType.Custom}], // Playing, Competing, Custom, Listening, Streaming, Watching
+			
 		status: "dnd",
 	});
+	
 });
 
 client.on('messageCreate', (message) => {
