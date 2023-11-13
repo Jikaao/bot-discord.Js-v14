@@ -18,7 +18,7 @@ module.exports = {
       // Créé le lien de recherche Google.
       const googleSearchURL = `https://www.google.com/search?q=${searchQuery}`;
   
-      // Répond avec le lien.
+      
       await interaction.reply({ content: googleSearchURL });
     
   },
