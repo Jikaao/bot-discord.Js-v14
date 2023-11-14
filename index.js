@@ -63,7 +63,7 @@ client.on("ready", () => {
   client.user.setPresence({
     activities: [
       {
-        name: ` discord.gg/Fairytailfr`,
+        name: `discord.gg/Fairytailfr`,
         type: ActivityType.Custom,
       },
     ], // Playing, Competing, Custom, Listening, Streaming, Watching
